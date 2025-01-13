@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class RemoveAllCharacter {
     /**
      * Return a String that has all the character of a String removed.
@@ -12,6 +12,20 @@ public class RemoveAllCharacter {
      * @return str, without any characters of type ch.
      */
     public String removeAll(String str, String ch){
-        return null;
+        // return null;
+        String result = "";
+        String CurrentCharacter = "";
+        // int ToRemove = str.indexOf(ch);
+
+        for (int i = 0; i < str.length(); i++) {
+            CurrentCharacter += str.charAt(i);
+            if (!(CurrentCharacter.compareTo(ch) == 0)) {
+                char AddString = str.charAt(i);
+                result += AddString;
+            }
+            CurrentCharacter = "";
+         
+        }
+        return result;
     }
 }
